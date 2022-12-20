@@ -1,0 +1,41 @@
+= jDeploy JavaFX Starter Template
+
+A project template for a JavaFX project that includes workflows to auto-deploy native app installers for every commit, and every release/tag.
+
+== Features
+
+Native Desktop App Installers::
+This project includes a GitHub actions workflow that generates native installers for each branch and release.  https://github.com/shannah/jdeploy-javafx-starter/releases/tag/master[See example].
++
+image::https://github.com/shannah/jdeploy-javafx-starter/wiki/images/master-tag.png[Example Github Release with Native bundles]
+
+JavaFX 19::
+Based on the official https://openjfx.io/openjfx-docs/#maven[javafx-archetype-simple archetype] developed by the openjfx project.
+
+Java 17::
+Currently builds for Java 17, but will be updated to support latest LTS release.
+
+Auto-Updates::
+Native apps will automatically update to the latest version on launch.  Bundles created via a Tag or Release will auto-update to the latest release.  Bundles created via a commit to a branch, will auto-update to the latest commit on that branch.
+
+Distribute "Branch-based" apps::
+Each branch will have its own corresponding installer, which will automatically receive updates for that branch.  E.g. If you create "dev" and "stage" branches, each will have its own "release".  Users of the "stage" app will automatically receive updates to the "stage" branch.  Users of the "dev" app will receive updates to the "dev" branch.
+
+== Getting Started
+
+See https://github.com/shannah/jdeploy-javafx-starter/wiki/Getting-Started[Getting Started Wiki Page]
+
+== How it Works
+
+This template includes a link:.github/workflows/jdeploy.yml[workflow] that will automatically generate native app installers for Windows, Mac, and Linux to track all branches and releases/tags in this repository.  This workflow runs on all commits and all tags.
+
+For "commits", it will generate native bundles in a tag whose name matches the branch name.  E.g. Bundles for the "master" branch will be posted in a tag called "master", which will include native bundles that are kept up-to-date with the state of the "master" branch.
+
+== Native Bundle Configuration
+
+Native bundles are generated using jDeploy a free, open source tool for deploying Java apps as native bundles. It includes a desktop GUI app for configuring your app.  You can customize the icon, splash screen, file type associations, and more.
+
+https://www.jdeploy.com[Learn more].
+
+
+
