@@ -115,7 +115,7 @@ runs:
       shell: bash
       run: |
         gh release delete -R '${{ inputs.target_repository }}' '${{ github.ref_name }}' || true
-        gh release create -R '${{ inputs.target_repository }}' '${{ github.ref_name }}' -F ./jdeploy/github-release-files/jdeploy-release-notes.md "./jdeploy/github-release-files/*"
+        gh release create -R '${{ inputs.target_repository }}' '${{ github.ref_name }}' -F ./jdeploy/github-release-files/jdeploy-release-notes.md ./jdeploy/github-release-files/*
       env:
         GH_TOKEN: ${{ inputs.github_token }}
 
