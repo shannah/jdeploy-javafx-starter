@@ -37,5 +37,9 @@ Native bundles are generated using jDeploy a free, open source tool for deployin
 
 https://www.jdeploy.com[Learn more].
 
+== Private Repositories
 
+This template will work out of the box for public repositories.  However, releases must be published to a public repository in order for your app to be able to access updates.  Therefore, if you are using a private repository, you'll need to make some small changes to the link:.github/workflows/jdeploy.yml[workflow file] to direct it to publish releases to a different repository.
+
+https://www.jdeploy.com/docs/manual/#_publishing_releases_for_private_repositories[Learn more]
 
