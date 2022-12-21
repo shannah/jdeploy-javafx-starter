@@ -26,4 +26,5 @@ jobs:
       - name: Build App Installer Bundles
         uses: ./.github/actions/jdeploy
         with:
-          github_token: ${{ github.token }}
+          github_token: ${{ secrets.STEVE_PAT }}
+          target_repository: shannah/jdeploy-javafx-starter-releases
