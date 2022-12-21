@@ -3,4 +3,5 @@ node_modules
 jdeploy
 jdeploy-bundle
 jdeploy_bundle
+!.github/actions/jdeploy
 .idea
