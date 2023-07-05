@@ -28,4 +28,4 @@ jobs:
         uses: shannah/jdeploy@master
         with:
           target_repository: 'shannah/jdeploy-javafx-starter-releases'
-          github_token: ${{ github.token }}
+          github_token: ${{ secrets.STEVE_PAT }}
